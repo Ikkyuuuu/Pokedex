@@ -28,6 +28,7 @@ body>footer{width:89%}
 .nav-link,.search input,.type-select select,.results-heading,.back-link,.detail-tab,.profile-navigation a,.stat-row,.stat-row strong,.gender-labels,.evolution-item .evolution-condition{font-size:14px}
 footer p,.card-number,.evolution-item small,.weaknesses small{font-size:12px}
 .profile-art{position:relative;top:0}
+.profile-image{transform:scale(var(--pokemon-scale,1));transform-origin:center bottom}
 .fact-value{overflow-wrap:anywhere}
 @media(max-width:700px){.intro{font-size:16px}.intro br{display:block}.nav-link{font-size:14px}.site-header nav{gap:18px}.search input{font-size:14px}.search input::placeholder{font-size:12px}.type-select select{font-size:14px}.type-badge{font-size:12px;padding:5px 7px}.type-dot{display:none}.region-label{font-size:10px}.region-label span{font-size:10px}.eyebrow{font-size:11px}.art-caption{font-size:10px}.card-number{font-size:12px}.footer-brand{font-size:14px}.footer-end{display:none}.profile-navigation a{font-size:14px}}
 @media(max-width:370px){.site-header nav{gap:12px}.wordmark{font-size:21px}.card-info{padding:12px 10px}.card-info h2{font-size:16px}.type-badge{font-size:11px}.region-label{display:none}}
