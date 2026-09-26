@@ -33,7 +33,7 @@ Wanna take a closer look at Charizard? Open its page and click through the evolu
 
 Looking for the fastest Pokémon, or the one with the most HP? Switch to the table icon beside the type filter, then click a column heading to sort. Click anywhere on a row to open that Pokémon, or use its heart to save it. <br><br>
 
-<img src="docs/images/table-view.png" width="100%" alt="Favorite Pokémon in table view, sorted by total base stats"><br><br>
+<img src="docs/images/table-view.png" width="100%" alt="Favorite Pokémon in table view, sorted by Pokédex number"><br><br>
 
 ### Type Filter
 
