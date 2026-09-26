@@ -4,7 +4,7 @@ Ever forget what a Pokémon is weak against, or just wanna look through your fav
 
 This is a Pokédex for **905 Pokémon from Generations I–VIII**, from Bulbasaur all the way to Enamorus. Look up a name, filter by type, compare stats, or click on a Pokémon to see its evolution. And yes, most of them move. <br><br>
 
-<img src="docs/images/explore.png" width="100%" alt="Pokédex Explore page with animated Pokémon cards, search, type filter, and view controls"><br><br>
+<img src="docs/images/explore.png" width="100%" alt="Pokédex Favorites page in grid view, with saved Pokémon, search, type filter, and view controls"><br><br>
 
 ## Key Feature
 
@@ -25,13 +25,15 @@ This is a Pokédex for **905 Pokémon from Generations I–VIII**, from Bulbasau
 
 ### Pokémon Detail
 
-Wanna know what Bulbasaur turns into? Open its page and click through the evolution chain. The measurements, abilities, weaknesses, and stats are right beside the artwork. <br><br>
+Wanna take a closer look at Charizard? Open its page and click through the evolution chain. The measurements, abilities, weaknesses, and stats are right beside the artwork. <br><br>
 
-<img src="docs/images/pokemon-detail.png" width="100%" alt="Bulbasaur detail page showing its artwork, evolution chain, measurements, weaknesses, gender ratio, and base stats"><br><br>
+<img src="docs/images/pokemon-detail.png" width="100%" alt="Charizard detail page showing its artwork, evolution chain, measurements, weaknesses, gender ratio, and base stats"><br><br>
 
 ### Table View
 
 Looking for the fastest Pokémon, or the one with the most HP? Switch to the table icon beside the type filter, then click a column heading to sort. Click anywhere on a row to open that Pokémon, or use its heart to save it. <br><br>
+
+<img src="docs/images/table-view.png" width="100%" alt="Favorite Pokémon in table view, sorted by total base stats"><br><br>
 
 ### Type Filter
 
@@ -62,16 +64,6 @@ npm run check
 ```
 
 To refresh the catalog, install Python 3 and Pillow (`pip install Pillow`), then run `npm run refresh-data`. This step needs internet. <br><br>
-
-## Deployment Platform
-
-The site is ready for **GitHub Pages**. To publish it:
-
-1. Open **Settings → Pages** in this repo and choose **GitHub Actions** as the source.
-2. Go to **Actions → Deploy GitHub Pages → Run workflow** and select `main`.
-3. Once it finishes, open https://Ikkyuuuu.github.io/Pokedex/.
-
-The workflow checks the catalog and publishes the `dist/` folder. Run it again whenever you want to publish an update. Pushing changes by itself doesn't deploy the site. <br><br>
 
 ## Source
 
