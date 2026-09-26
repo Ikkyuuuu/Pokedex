@@ -1,0 +1,20 @@
+{
+  "normal": "https://sg.portal-pokemon.com/public_assets/images/type/type1.svg",
+  "fire": "https://sg.portal-pokemon.com/public_assets/images/type/type2.svg",
+  "water": "https://sg.portal-pokemon.com/public_assets/images/type/type3.svg",
+  "electric": "https://sg.portal-pokemon.com/public_assets/images/type/type4.svg",
+  "grass": "https://sg.portal-pokemon.com/public_assets/images/type/type5.svg",
+  "ice": "https://sg.portal-pokemon.com/public_assets/images/type/type6.svg",
+  "fighting": "https://sg.portal-pokemon.com/public_assets/images/type/type7.svg",
+  "poison": "https://sg.portal-pokemon.com/public_assets/images/type/type8.svg",
+  "ground": "https://sg.portal-pokemon.com/public_assets/images/type/type9.svg",
+  "flying": "https://sg.portal-pokemon.com/public_assets/images/type/type10.svg",
+  "psychic": "https://sg.portal-pokemon.com/public_assets/images/type/type11.svg",
+  "bug": "https://sg.portal-pokemon.com/public_assets/images/type/type12.svg",
+  "rock": "https://sg.portal-pokemon.com/public_assets/images/type/type13.svg",
+  "ghost": "https://sg.portal-pokemon.com/public_assets/images/type/type14.svg",
+  "dragon": "https://sg.portal-pokemon.com/public_assets/images/type/type15.svg",
+  "dark": "https://sg.portal-pokemon.com/public_assets/images/type/type16.svg",
+  "steel": "https://sg.portal-pokemon.com/public_assets/images/type/type17.svg",
+  "fairy": "https://sg.portal-pokemon.com/public_assets/images/type/type18.svg"
+}
