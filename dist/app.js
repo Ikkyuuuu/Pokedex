@@ -120,13 +120,13 @@ function route() {
     closeTypeMenu();
     $('#navigation-search').hidden=true;
     $('#catalog').hidden=true;$('#detail').hidden=false;selectedAnimation=0;renderDetail(p);
-    document.title=`${p.displayName} #${number(p.id)} — Pokédex`;
+    document.title='Pokédex';
     window.scrollTo({top:0,behavior:'instant'});
     $('#detail h1').focus({preventScroll:true});
   } else {
     $('#navigation-search').hidden=false;
     if(wasDetail) onlyFavorites=false;
-    $('#catalog').hidden=false;$('#detail').hidden=true;document.title='Pokédex — Generations I–VIII';renderCatalog();
+    $('#catalog').hidden=false;$('#detail').hidden=true;document.title='Pokédex';renderCatalog();
     if(wasDetail) {window.scrollTo({top:catalogScroll,behavior:'instant'});(document.querySelector(`.card-link[href="#pokemon/${lastPokemonId}"]`)||document.querySelector('.card-link'))?.focus({preventScroll:true});}
   }
 }
