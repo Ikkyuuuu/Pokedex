@@ -7,6 +7,7 @@ assert.equal(new Set(data.map(p=>p.name)).size,905);
 assert.deepEqual(Array.from({length:8},(_,i)=>data.filter(p=>p.generation===i+1).length),[151,100,135,107,156,72,88,96]);
 for(const [index,p] of data.entries()){
   assert.equal(p.id,index+1);
+  assert(Number.isFinite(p.height) && p.height > 0,`${p.name} height invalid`);
   assert(p.description&&p.types.length&&p.abilities.length,`${p.name} profile incomplete`);
   assert.equal(Object.keys(p.stats).length,6);
   assert(p.evolution.every(e=>data.some(q=>q.id===e.id)),`${p.name} evolution link invalid`);

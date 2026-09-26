@@ -11,6 +11,16 @@ body>.site-navigation,body>footer{flex-shrink:0}
 body>footer{width:89%}
 @media(max-width:700px){body>footer{width:88%}}
 
+/* Height-based artwork shares a baseline while preserving the original sprite ratio. */
+.card-art{align-items:flex-end;padding-bottom:20px}
+.pokemon-image{width:auto;max-width:82%;height:calc(160px * var(--pokemon-scale,1));object-position:center bottom;transform:none}
+.pokemon-card:hover .pokemon-image{transform:translateY(-6px) scale(1.045)}
+@media(max-width:700px){
+  .card-art{padding-bottom:16px}
+  .pokemon-image{height:calc(124px * var(--pokemon-scale,1))}
+  .pokemon-card:hover .pokemon-image{transform:none}
+}
+
 /* Readable labels and controls at both catalog breakpoints. */
 .edition,.eyebrow,.region-label,.region-label span,.footer-end,.art-caption,.profile-category,.fact-label{font-size:12px}
 .intro{font-size:16px}
@@ -80,8 +90,8 @@ footer p,.card-number,.evolution-item small,.weaknesses small{font-size:12px}
 /* Keep the search field outline visible at rest. */
 .search{height:44px;box-shadow:0 0 0 2px #d4dacd;border-radius:6px}
 .search:focus-within{box-shadow:0 0 0 2px #9ca892}
-.search,.search input{cursor:url('assets/text-cursor.svg') 12 12,text}
-.search input{caret-color:#262823}
+.search,.search input{cursor:url('assets/text-cursor.svg') 8 10,text}
+.search input{caret-color:#000}
 .search input::-webkit-search-cancel-button{appearance:none}
 .clear-search{display:grid;place-items:center;flex:none;width:26px;height:26px;padding:4px;border-radius:50%;background:transparent;color:#245b94;cursor:pointer;transition:transform .2s,background .2s,color .2s}
 .clear-search svg{width:16px;height:16px}

@@ -37,6 +37,8 @@ const number = id => String(id).padStart(3,'0');
 const title = text => text.charAt(0).toUpperCase()+text.slice(1);
 const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const sprite = p => p.sprite || `assets/${p.name}.${p.name==='scyther'?'png':'gif'}`;
+// Compress real-world height differences so tiny species remain visible and giants fit.
+const cardArtworkScale = p => Math.min(1, Math.max(0.42, Math.sqrt(p.height / 2))).toFixed(3);
 const badge = (type, extra='') => `<span class="type-badge" data-type="${type}" title="${title(type)}"><img src="assets/types/${type}.svg" alt="${title(type)}" width="36" height="36">${extra}</span>`;
 function favoriteButton(p) { return `<button class="favorite-button" data-favorite="${p.id}" aria-label="${favorites.has(p.id)?'Remove':'Add'} ${escape(p.displayName)} ${favorites.has(p.id)?'from':'to'} favorites" aria-pressed="${favorites.has(p.id)}">${heart}</button>`; }
 function updateFavorites() {
@@ -74,7 +76,7 @@ function renderCatalog({ append = false } = {}) {
   if(sameResults) limit=Math.max(limit,grid.children.length);
   const unchanged = !append && sameResults && grid.children.length === Math.min(limit,matches.length);
   const start = append ? grid.children.length : 0;
-  const cards = matches.slice(start,limit).map((p,i)=>catalogView==='table'?tableRow(p,start+i):`<article class="pokemon-card" data-type="${p.types[0]}">${favoriteButton(p)}<a class="card-link" href="#pokemon/${p.id}" aria-label="Explore ${escape(p.displayName)}, number ${number(p.id)}"><div class="card-art"><span class="card-number">${number(p.id)}</span><span class="art-ring" aria-hidden="true"></span><img class="pokemon-image" src="${sprite(p)}" alt="${escape(p.displayName)}" width="180" height="160" ${start+i>7?'loading="lazy"':'fetchpriority="high"'}></div><div class="card-info"><div class="card-title-row"><h2>${escape(p.displayName)}</h2></div><div class="type-badges">${p.types.map(t=>badge(t)).join('')}</div></div></a></article>`).join('');
+  const cards = matches.slice(start,limit).map((p,i)=>catalogView==='table'?tableRow(p,start+i):`<article class="pokemon-card" data-type="${p.types[0]}">${favoriteButton(p)}<a class="card-link" href="#pokemon/${p.id}" aria-label="Explore ${escape(p.displayName)}, number ${number(p.id)}"><div class="card-art"><span class="card-number">${number(p.id)}</span><span class="art-ring" aria-hidden="true"></span><img class="pokemon-image" style="--pokemon-scale:${cardArtworkScale(p)}" src="${sprite(p)}" alt="${escape(p.displayName)}" width="180" height="160" ${start+i>7?'loading="lazy"':'fetchpriority="high"'}></div><div class="card-info"><div class="card-title-row"><h2>${escape(p.displayName)}</h2></div><div class="type-badges">${p.types.map(t=>badge(t)).join('')}</div></div></a></article>`).join('');
   if (append) grid.insertAdjacentHTML('beforeend', cards);
   else if(!unchanged) grid.innerHTML = cards;
   catalogResultKey = resultKey;
